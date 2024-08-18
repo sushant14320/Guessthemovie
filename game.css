@@ -1,0 +1,160 @@
+/* game.css */
+
+/* Grid layout adjustments */
+ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin: auto;
+    max-width: 100%;
+    width: 90%;
+  }
+  
+  #lii {
+    height: 80px;
+    width: 80px;
+    font-size: 1.5em;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+  
+    #lii {
+        height: 60px;
+        width: 60px;
+        font-size: 1.2em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+  
+    #lii {
+        height: 50px;
+        width: 50px;
+        font-size: 1em;
+    }
+  }
+  
+  /* Center elements */
+  #main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  /* Form styling */
+  #form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  #inptText {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 100px;
+    text-align: center;
+  }
+  
+  #btn-check {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #d35400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #btn-check:hover {
+    background-color: #e67e22;
+  }
+  
+  /* Movie display styling */
+  #movie-id {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  #movie {
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  /* Span styling */
+  #span {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    font-size: 1.2em;
+  }
+  
+  #chances {
+    font-size: 1.2em;
+    color: #d35400;
+  }
+  
+  #restart {
+    padding: 10px;
+    font-size: 1em;
+    background-color: green;
+    color: white;
+    border: 2px solid burlywood;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #restart:hover {
+    background-color: darkgreen;
+  }
+  
+  /* Modal content styling */
+  .modal-content,
+  .modal-contentwin {
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+  }
+  
+  .modal-content h4,
+  .modal-contentwin h2,
+  .modal-contentwin h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content,
+    .modal-contentwin {
+        width: 100%;
+        padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .modal-content,
+    .modal-contentwin {
+        padding: 10px;
+    }
+  
+    .modal-content h4,
+    .modal-contentwin h2,
+    .modal-contentwin h3 {
+        font-size: 1em;
+    }
+  }

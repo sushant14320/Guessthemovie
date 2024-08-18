@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/game.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Guess The Movie</title>
+
+    <style>
+        /* Style for the modal */
+        #myModal, #myModalwin {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content, .modal-contentwin {
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        .close, .closewin {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover, .close:focus, .closewin:hover, .closewin:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Increased spacing */
+        body {
+            padding: 30px;
+        }
+
+        #ul-matrix {
+            margin-bottom: 40px; /* Increased space below the grid */
+        }
+
+        #span {
+            margin-bottom: 40px; /* Increased space below the chances section */
+        }
+
+        #main-id {
+            margin-bottom: 60px; /* Increased space below the main game area */
+        }
+
+        #movie-id {
+            margin-bottom: 40px; /* Increased space below the movie display */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Game Grid -->
+    <ul id="ul-matrix"></ul>
+
+    <!-- Chances Display -->
+    <span id="span">
+        <h3>Chances:</h3>
+        <div id="chances"></div>
+    </span>
+
+    <!-- Input and Check Button -->
+    <div id="main">
+        <div id="main-id">
+            <div id="form">
+                <input id="inptText" type="text" placeholder="Type a letter" />
+                <button id="btn-check">Check</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Movie Display -->
+    <div id="movie-id">
+        <div id="movie"></div>
+    </div>
+
+    <!-- Modals -->
+    <div id="myModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h4>You will get 9 chances to guess</h4>
+            <h4>If you guess it without replenishing the chances, you will win</h4>
+            <h4>If you run out of chances, you will lose</h4>
+        </div>
+    </div>
+
+    <div id="myModalwin">
+        <div class="modal-contentwin">
+            <span class="closewin">&times;</span>
+            <h2 id="result"></h2>
+            <h3 id="h3"></h3>
+            <button id="restart">Restart</button>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/functions.js"></script>
+    <script type="text/javascript" src="/index.js"></script>
+</body>
+
+</html>
